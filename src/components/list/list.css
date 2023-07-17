@@ -1,0 +1,55 @@
+ul{
+    background-color: rgb(210, 210, 210);
+    border-radius: 14px;
+    padding: 15px;
+    width: 85%;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 4rem;
+}
+ul li{
+    position: relative;
+    left: 10px;
+    padding:12px 0 0 15px ;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    background-color: azure;
+    list-style-type: none;
+    /* margin: 0px 5px 0 5px; */
+    /* border: 1px solid black; */
+    border: none;
+    border-radius: 10px;
+    /* padding-top: 10px; */
+    height: 43px;
+    
+    /* text-align: center; */
+}
+.btn-Edit{
+    position: absolute;
+    left: 58%;
+    padding: 10px 15px;
+    height:40px;
+    width: 20%;
+    border-radius: 25px;
+    border: none;
+    background-color: #0463e8;
+    font-weight: 600;
+    color: white;
+}
+.btn-red{
+    /* margin-top: 5px; */
+    position: absolute;
+    right: 5px;
+    padding: 10px 15px;
+    height:40px;
+    width: 20%;
+    border-radius: 25px;
+    border: none;
+    background-color: crimson;
+    font-weight: 600;
+    color: white;
+}
