@@ -1,9 +1,9 @@
 import React from "react";
 import  './backdrop.css'
 
-const BackdropModal = () =>{
+const BackdropModal = ({closeModalClick}) =>{
 return (<>
-<div className="backrdop"></div>
+<div className="backrdop" onClick={closeModalClick}></div>
 </>);
 }
 

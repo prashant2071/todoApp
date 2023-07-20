@@ -1,11 +1,10 @@
-import Modal from './components/modal/Modal';
-import Home from './home/Home'
-
+import React from 'react';
+import Home from './home/Home';
 function App() {
+
   return (
     <div >
       <Home/>
-      {/* <Modal/> */}
     </div>
   );
 }

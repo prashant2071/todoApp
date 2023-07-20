@@ -1,37 +1,44 @@
-import React from 'react'
-import BackdropModal from './Backdrop';
-import ReactDOM from 'react-dom';
-import './modal.css'
+import React from "react";
+import BackdropModal from "./Backdrop";
+import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./modal.css";
+import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 
-const Modal = () => {
-  const closeModal = () =>{
-    console.log("hello")
-  }
-  const SubmitModal = () =>{
-    console.log("hello")
-  }
+const Modal = ({ closeModal, SubmitModal, inputData, onChange }) => {
 
-  const ModalCard = ()=>{
-    return (
-      <div className='modal'>
-        <button className='close'>close</button>
-        <div className="form">
-          <input type='text' placeholder='Enter place holder'/>
-        </div>
-        <div className="footer">
-          <button type='button' className='close' onClick={SubmitModal}>Cancel</button>
-          <button type='button' className='save' onClick={closeModal}>Save</button>
-        </div>
-      </div>
-    )
-  }
-  const portal = document.getElementById('overlays')
+
+  //     <BackdropModal closeModalClick={closeModal} />
+  //     <ModalCard />
+  //     {/* {ReactDOM.createPortal(<BackdropModal closeModalClick={closeModal}/>, portal)} */}
+  //     {/* {ReactDOM.createPortal(<ModalCard />, document.getElementById("modal"))} */}
   return (
-    <>
-    {ReactDOM.createPortal(<BackdropModal/>,portal)}
-    {ReactDOM.createPortal(<ModalCard/>,document.getElementById('modal'))}
-    </>
-  )
-}
+    <><BackdropModal closeModalClick={closeModal} />
+    <div className="modal">
+      
+      <FontAwesomeIcon
+        icon={faCircleXmark}
+        className="cross-icon"
+        onClick={closeModal}
+      />
+      <div className="form">
+        <input
+          type="text"
+          placeholder="Enter place holder"
+          value={inputData}
+          onChange={onChange}
+        />
+      </div>
+      <div className="footer">
+        <button type="button" className="close" onClick={closeModal}>
+          Cancel
+        </button>
+        <button type="button" className="save" onClick={SubmitModal}>
+          Save
+        </button>
+      </div>
+    </div></>
+  );
+};
 
-export default Modal
+export default Modal;

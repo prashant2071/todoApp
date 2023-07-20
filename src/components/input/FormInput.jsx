@@ -1,18 +1,8 @@
 import React, { useCallback, useState } from "react";
-import './input.css'
+import "./input.css";
 
 const FormInput = (props) => {
-    console.log("hello formInput",props.inputData);
-    // const handleSubmit =(e)=>{
-    //     e.preventDefault();
-    //     props.submit(input);
-    //     setInput("");
-    // }
-    // const handleChange = (e) =>{
-    //     console.log("hello",e.target.value)
-    //     const {value} = e.target;
-    //     setInput(value);
-    // }
+  console.log("formInput componet function input value :-", props.inputData);
   return (
     <>
       <div className="form">
@@ -20,10 +10,14 @@ const FormInput = (props) => {
           <input
             type="text"
             placeholder="Enter task .."
-            value={props.inputData}
+            value={!props.edit ? props.inputData : ""}
             onChange={props.onChange}
           />
-          <button className="btn-blue" type="submit">
+          <button
+            className="btn-blue"
+            type="submit"
+            onClick={props.SubmitModal}
+          >
             save
           </button>
         </form>

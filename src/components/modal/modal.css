@@ -2,7 +2,7 @@
     position: fixed;
     top: 20vh;
     left: 5%;
-    height: 20vh;
+    height: 18vh;
     width: 90%;
     background:linear-gradient(to left top,#548fd8,rgb(155, 12, 48));
     padding: 1rem;
@@ -16,6 +16,12 @@
   }
   .footer{
     margin-top: 1rem;
+  }
+  .cross-icon{
+    font-size: 35px;
+    float: right;
+    color: white;
+    margin-bottom: 10px;
   }
   .close{
     margin-right: 10px;
@@ -42,7 +48,7 @@
 }
  .modal .form input{
     padding: 12px 16px;
-    margin: 20px 5px 20px 20px ;
+    margin: 30px 5px 20px 20px ;
     width: 80%;
     border-radius: 15px;
     border: none;
